@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ENEM Bíblico 2026 - Inscrição</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .container {
+      background: #fff;
+      max-width: 600px;
+      padding: 30px;
+      margin-top: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .checkbox-group {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+    }
+    .checkbox-group input {
+      margin-right: 10px;
+    }
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      font-size: 1.1rem;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1a242f;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ENEM Bíblico 2026</h1>
+    <p class="subtitle">Exame Nacional de Ensino Missionário<br />Inscrição: R$15,00<br />Data: 11 de Janeiro de 2026</p>
+
+    <form id="inscricaoForm">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="idade">Idade</label>
+      <input type="number" id="idade" name="idade" min="1" max="120" required />
+
+      <label for="telefone">WhatsApp / Telefone</label>
+      <input type="text" id="telefone" name="telefone" required />
+
+      <label for="cidade">Cidade</label>
+      <input type="text" id="cidade" name="cidade" required />
+
+      <label for="igreja">Igreja (opcional)</label>
+      <input type="text" id="igreja" name="igreja" />
+
+      <label for="pagamento">Forma de pagamento</label>
+      <select id="pagamento" name="pagamento" required>
+        <option value="pix">Pix / QR Code</option>
+        <option value="presencial">Presencial</option>
+      </select>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="termos" required />
+        <label for="termos">Estou ciente das regras e normas do ENEM Bíblico 2026.</label>
+      </div>
+
+      <button type="submit">Finalizar Inscrição</button>
+    </form>
+  </div>
+  <footer>
+    Projeto organizado pela juventude para o Retiro 2026 • ENEM Bíblico
+  </footer>
+
+  <script>
+    document.getElementById('inscricaoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Inscrição recebida! Em breve entraremos em contato para o pagamento e informações.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
